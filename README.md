@@ -6,8 +6,10 @@ This example project demonstrates how to access repo secrets safely from GitHub 
 
 The following specific use-cases will be covered:
 * defining validation workflows that require secret information for the build process
-* avoiding pwn request attacks that attempt to leak repository secrets [1]
-* storing large (> 48 KB) repository secrets [2]
+* avoiding pwn request attacks that attempt to leak repository secrets [^1]
+* storing large (> 48 KB) repository secrets [^2]
+
+Due to the inherently dangerous nature of exposing secrets to untrusted code, deployment environments will be used to force manual vetting of the changes before the workflow can proceed [^3]. 
 
 ## Organization
 
@@ -22,7 +24,7 @@ For this example, `example-secrets-repo` has been set to public visibility, but 
 
 ### Encrypting the secret file
 
-The contents of a secret are limited to 48 KB. Larger secrets can be stored in an encrypted file and stored directly in the repo. This file can then be decrypted using a decryption passphrase stored as a repository secret [1].
+The contents of a secret are limited to 48 KB. Larger secrets can be stored in an encrypted file and stored directly in the repo. This file can then be decrypted using a decryption passphrase stored as a repository secret [^2].
 
 The secret in this example is `mystery.jpg`.
 
@@ -89,8 +91,10 @@ The second step will always be required to avoid automatically running potential
 
 <kbd><img src="images/deployment-approval.png" width=800></kbd>
 
-## Resources
+## References
 
-* [1] https://securitylab.github.com/resources/github-actions-preventing-pwn-requests
-* [2] https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets#storing-large-secrets
-* [3] https://dev.to/petrsvihlik/using-environment-protection-rules-to-secure-secrets-when-building-external-forks-with-pullrequesttarget-hci
+* https://github.com/BanjoRecomp/BanjoRecomp - referenced for workflow implementation
+
+[^1]: https://securitylab.github.com/resources/github-actions-preventing-pwn-requests
+[^2]: https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets#storing-large-secrets
+[^3]: https://dev.to/petrsvihlik/using-environment-protection-rules-to-secure-secrets-when-building-external-forks-with-pullrequesttarget-hci
