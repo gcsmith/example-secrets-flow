@@ -65,7 +65,7 @@ Create the following deployment environments:
 
 <kbd><img src="images/env-list.png" width=800></kbd>
 
-For the `authorize-external` environment, add a 'Required reviewers' deployment protection rule. This will gate the action using this environment until the review explicitly approves the deployment.
+For the `authorize-external` environment, add a 'Required reviewers' deployment protection rule. This will gate the action using this environment until the reviewer explicitly approves the deployment.
 
 <kbd><img src="images/env-protection.png" width=800></kbd>
 
