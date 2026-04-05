@@ -1,0 +1,40 @@
+name: regress-validate
+on:
+  workflow_call:
+    secrets:
+      SECRET_PASSPHRASE: { required: true }
+      SECRET_REPO: { required: true }
+      SECRET_TOKEN: { required: true }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        version: [ foo, bar ]
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}
+    - name: Fetch Secrets
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ secrets.SECRET_REPO }}
+        token: ${{ secrets.SECRET_TOKEN }}
+        path: secret_repo
+    - name: Decrypt Secrets
+      working-directory: secret_repo
+      run: |
+        ./decrypt_secret.sh
+        mv mystery.jpg ..
+      env:
+          SECRET_PASSPHRASE: ${{ secrets.SECRET_PASSPHRASE }}
+          SECRET_NAME: mystery.jpg
+    - name: Install Packages
+      run: sudo apt-get install -y git make git build-essential
+    - name: Build
+      run: make
+    - name: Cleanup
+      run: make clean
+
