@@ -36,9 +36,9 @@ Create a fine-grained token with read-only access to the private repo containing
 
 :arrow_right: `Account Settings > Developer Settings > Personal access tokens > Fine-grained tokens > Generate new token`
 
-<kbd><img src="images/access-token-list.png" width=600></kbd>
+<kbd><img src="images/access-token-list.png" width=800></kbd>
 
-<kbd><img src="images/access-token-permissions.png" width=600></kbd>
+<kbd><img src="images/access-token-permissions.png" width=800></kbd>
 
 ### Create repository secrets
 
@@ -50,7 +50,7 @@ Create the following repository secrets:
 
 :arrow_right: `Project Settings > Security and quality > Secrets and variables > Actions > New repository secret`
 
-<kbd><img src="images/repo-secrets-list.png" width=600></kbd>
+<kbd><img src="images/repo-secrets-list.png" width=800></kbd>
 
 ### Create deployment environments
 
@@ -61,11 +61,11 @@ Create the following deployment environments:
 
 :arrow_right: `Project Settings > Code and automation > Environments > New environment`
 
-<kbd><img src="images/env-list.png" width=600></kbd>
+<kbd><img src="images/env-list.png" width=800></kbd>
 
 For the `authorize-external` environment, add a 'Required reviewers' deployment protection rule. This will gate the action using this environment until the review explicitly approves the deployment.
 
-<kbd><img src="images/env-protection.png" width=600></kbd>
+<kbd><img src="images/env-protection.png" width=800></kbd>
 
 ### Use the deployment environments from your workflows
 
