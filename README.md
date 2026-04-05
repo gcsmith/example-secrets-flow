@@ -76,6 +76,18 @@ See the examples under `.github/workflows`:
 * `regress-external.yaml` - action to be run for external events (PR from a fork)
 * `regress-validate.yaml` - the reusable workflow shared by both `regress-internal` and `regress-external`
 
+### Verify expected behavior 
+
+If everything is working as expected, a pull request from a first-time contribitor will require two steps:
+* manual approval for the `regress-internal` action (`pull_request` event)
+* manual deployment authorization for the `regress-external` action (`pull_request_target` event)
+
+The first step will only be required once based on the project setting specified in the previous steps.
+
+The second step will always be required to avoid automatically running potentially unsafe code in a privileged environment.
+
+<kbd><img src="images/deployment-approval.png" width=800></kbd>
+
 ## Resources
 
 * [1] https://securitylab.github.com/resources/github-actions-preventing-pwn-requests
