@@ -47,7 +47,7 @@ Create a fine-grained token with read-only access to the private repo containing
 Create the following repository secrets:
 
 * `SECRET_PASSPHRASE` - the passphrase used to encrypt `mystery.jpg` via gpg in the previous steps
-* `SECRET_REPO` - the name of the repo containing the secret in format `<user>/<repo>` (e.g., `gcsmith/example-secrets-repo)
+* `SECRET_REPO` - the name of the repo containing the secret in format `<user>/<repo>` (e.g., `gcsmith/example-secrets-repo`)
 * `SECRET_TOKEN` - the fine-grained access token generated in the previous steps
 
 :arrow_right: `Project Settings > Security and quality > Secrets and variables > Actions > New repository secret`
