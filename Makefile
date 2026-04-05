@@ -1,5 +1,5 @@
 
-default: all
+default: all extra_target
 
 all: verify
 
