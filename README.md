@@ -27,6 +27,7 @@ The contents of a secret are limited to 48 KB. Larger secrets can be stored in a
 The secret in this example is `mystery.jpg`.
 
 ```bash
+$ cd repos/example-secrets-repo
 $ gpg --symmetric --cipher-algo AES256 mystery.jpg  # GPG will prompt user for passphrase
 $ mkdir secrets && mv mystery.jpg.gpg secrets
 ```
