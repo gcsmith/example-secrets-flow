@@ -15,8 +15,8 @@ Due to the inherently dangerous nature of exposing secrets to untrusted code, de
 
 There are two repos for this example:
 
-* `example-secrets-repo` - the repo containing secret file(s) and a decryption script
-* `example-secrets-flow` - the repo that will consume the secret file
+* [`example-secrets-repo`](https://github.com/gcsmith/example-secrets-flow) - the repo containing secret file(s) and a decryption script
+* [`example-secrets-flow`](https://github.com/gcsmith/example-secrets-repo) - the repo that will consume the secret file
 
 For this example, `example-secrets-repo` has been set to public visibility, but this would typically be private.
 
