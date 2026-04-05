@@ -34,6 +34,8 @@ $ gpg --symmetric --cipher-algo AES256 mystery.jpg  # GPG will prompt user for p
 $ mkdir secrets && mv mystery.jpg.gpg secrets
 ```
 
+Remember this passphrase, as it will be used for the secret variable `SECRET_PASSPHRASE` referenced in the steps below to decrypt the file via the [decryption script](https://github.com/gcsmith/example-secrets-repo/blob/main/decrypt_secret.sh) stored alongside the secret itself.
+
 ### Generate fine-grained access token
 
 Create a fine-grained token with read-only access to the private repo containing the secrets.
