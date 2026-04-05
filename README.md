@@ -5,6 +5,7 @@
 This example project demonstrates how to access repo secrets safely from GitHub actions triggered by a pull request.
 
 The following specific use-cases will be covered:
+* defining validation workflows that require secret information for the build process
 * avoiding pwn request attacks that attempt to leak repository secrets [1]
 * storing large (> 48 KB) repository secrets [2]
 
