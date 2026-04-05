@@ -13,7 +13,7 @@ The following specific use-cases will be covered:
 
 There are two repos for this example:
 
-* `example-secrets-repo` - the repo containing secret file(s) and a decryption scripts
+* `example-secrets-repo` - the repo containing secret file(s) and a decryption script
 * `example-secrets-flow` - the repo that will consume the secret file
 
 For this example, `example-secrets-repo` has been set to public visibility, but this would typically be private.
