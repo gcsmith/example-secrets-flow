@@ -75,9 +75,9 @@ For the `authorize-external` environment, add a 'Required reviewers' deployment 
 
 See the examples under `.github/workflows`:
 
-* `regress-internal.yaml` - action to be run for internal events (push and PR *not* from a fork)
-* `regress-external.yaml` - action to be run for external events (PR from a fork)
-* `regress-validate.yaml` - the reusable workflow shared by both `regress-internal` and `regress-external`
+* [`regress-internal.yaml`](.github/workflows/regress-internal.yaml) - action to be run for internal events (push and PR *not* from a fork)
+* [`regress-external.yaml`](.github/workflows/regress-external.yaml) - action to be run for external events (PR from a fork)
+* [`regress-validate.yaml`](.github/workflows/regress-validate.yaml) - the reusable workflow shared by both `regress-internal` and `regress-external`
 
 ### Verify expected behavior 
 
